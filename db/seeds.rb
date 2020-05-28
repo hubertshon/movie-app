@@ -6,7 +6,7 @@ require 'ffaker'
   # actor.save
 
 10.times do 
-  actor = Actor.new({first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, known_for: Ffaker::title})
+  actor = Actor.new({first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, known_for: FFaker::Movie.title})
   actor.save
 end 
 
