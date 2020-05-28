@@ -6,3 +6,6 @@
   actor = Actor.new({first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock" })
   actor.save
 
+  actor = Actor.new({first_name: "Amy", last_name: "Adams", known_for: "Arrival" })
+  actor.save
+
