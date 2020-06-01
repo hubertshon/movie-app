@@ -1,0 +1,2 @@
+class Castcrew < ApplicationRecord
+end
