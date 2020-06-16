@@ -7,42 +7,42 @@ class Api::MoviesController < ApplicationController
   end
 
   def show
-    @movies = Movie.find(params[:id])
+    @movie = Movie.find(params[:id])
     render "show.json.jb"
   end
 
   def create
-    @movies = Movie.new(
+    @movie = Movie.new(
       title: params[:title],
       year: params[:year],
       plot: params[:plot],
       director: params[:director],
       english: params[:english]
     )
-    if @movies.save
+    if @movie.save
       render "show.json.jb"
     else
-      render json: { messages: @movies.errors.full_messages }, status: :unprocessable_entity
+      render json: { messages: @movie.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
   def update
-    @movies = Movie.find(params[:id])
-    @movies.title = params[:title] || @movies.title
-    @movies.year = params[:year] || @movies.year
-    @movies.plot = params[:plot] || @movies.plot
-    @movies.director = params[:director] || @movies.director
-    @movies.english = params[:english] || @movies.english
-    if @movies.save
+    @movie = Movie.find(params[:id])
+    @movie.title = params[:title] || @movie.title
+    @movie.year = params[:year] || @movie.year
+    @movie.plot = params[:plot] || @movie.plot
+    @movie.director = params[:director] || @movie.director
+    @movie.english = params[:english] || @movie.english
+    if @movie.save
       render "show.json.jb"
     else
-      render json: { messages: @movies.errors.full_messages }, status: :unprocessable_entity
+      render json: { messages: @movie.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @movies = Movie.find(params[:id])
-    @movies.destroy
+    @movie = Movie.find(params[:id])
+    @movie.destroy
     render json: { message: "Item deleted." }
   end
 
