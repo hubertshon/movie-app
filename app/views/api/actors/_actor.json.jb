@@ -1,0 +1,19 @@
+actor_hash = {
+  id: actor.id,
+  first_name: actor.first_name,
+  last_name: actor.last_name,
+  known_for: actor.known_for,
+  age: actor.age,
+  gender: actor.gender,
+  movie_plot: actor.movie.plot,
+  movie_id: actor.movie_id,
+  current_user: current_user
+}
+
+# @actors.first_name = params[:first_name] || @actors.first_name
+# @actors.last_name = params[:last_name] || @actors.last_name
+# @actors.known_for = params[:known_for] || @actors.known_for
+# @actors.age = params[:age] || @actors.age
+# @actors.gender = params[:gender] || @actors.gender
+
+actor_hash
