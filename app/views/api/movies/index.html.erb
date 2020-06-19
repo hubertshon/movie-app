@@ -1,0 +1,9 @@
+<h1>Movie List</h1>
+
+<%@movies.map do |movie|%>
+  <h3>Title: </h3><%=movie.title%>
+  <h5>Year: </h5><%=movie.year%>
+  <h5>Director: </h5><%=movie.director%>
+  <a href="/api/movies/<%=movie.id%>">More Info</a>
+  <br>
+ <%end%>

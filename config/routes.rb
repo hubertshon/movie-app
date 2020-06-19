@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # EXAMPLE HTML ROUTE
-  # get "/photos" => "photos#index"
+  #get "/movies/:id" => "movies#show"
 
   namespace :api do
     get "/actors" => "actors#index"
@@ -10,11 +10,14 @@ Rails.application.routes.draw do
     delete "/actors/:id" => "actors#destroy"
 
 
+
     get "/movies" => "movies#index"
     get "movies/:id" => "movies#show"
     post "/movies" => "movies#create"
     patch "/movies/:id" => "movies#update"
     delete "/movies/:id" => "movies#destroy"
+
+    post "movies/search" => "movies#search"
 
     post "/users" => "users#create"
 

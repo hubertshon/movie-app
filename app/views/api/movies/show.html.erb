@@ -1,0 +1,14 @@
+
+<h2><%= @movie.title%></h2>
+<h4>Released </h4><%= @movie.year%>
+<h4>Director: </h4><%= @movie.director%>
+<h4>Plot: </h4><%= @movie.plot%>
+
+<h3>New Movie?</h3>
+<form method="post" action="/api/movies/search">
+  <%# <label for="title">Title</label>
+  <input id="title" type="text" name="title"/> %>
+  <label for="year">Year</label>
+  <input id="year" type="text" name="year"/>
+  <p>(Try 1999, 2011, 2013, 2014, 2016, 2017, 2019)</p>
+</form> 
