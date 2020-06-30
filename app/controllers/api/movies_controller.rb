@@ -11,14 +11,14 @@ class Api::MoviesController < ApplicationController
 
   def index
     @movies = Movie.all#(english: :true)
-    #render "index.json.jb"
-    render "index.html.erb"
+    render "index.json.jb"
+    #render "index.html.erb"
   end
 
   def show
     @movie = Movie.find(params[:id])
-    #render "show.json.jb"
-    render "show.html.erb"
+    render "show.json.jb"
+    #render "show.html.erb"
   end
 
   def create
